@@ -5,21 +5,29 @@ image:
   # Overrides the image tag whose default is the chart appVersion.
   tag: "299d4e1"
   port: 3333
+
 imagePullSecrets: []
 nameOverride: ''
 fullnameOverride: ''
+
 serviceAccount:
   create: true
   automount: true
   annotations: {}
   name: ''
+
 podAnnotations: {}
+
 podLabels: {}
+
 podSecurityContext: {}
+
 securityContext: {}
+
 service:
   type: ClusterIP
   port: 80
+  
 ingress:
   enabled: false
   className: ''
@@ -39,12 +47,12 @@ resources:
   # choice for the user. This also increases chances charts run on environments with little
   # resources, such as Minikube. If you do want to specify resources, uncomment the following
   # lines, adjust them as necessary, and remove the curly braces after 'resources:'.
-    requests:
-      cpu: 200m
-      memory: 512Mi
-    limits:
-      cpu: 400m
-      memory: 512Mi
+  requests:
+    cpu: 200m
+    memory: 512Mi
+  limits:
+    cpu: 400m
+    memory: 512Mi
 
 # livenessProbe:
 #   httpGet:
