@@ -6,8 +6,7 @@ replicaCount: 5
 image:
   repository: tvieirabruna/nlw.service.passin
   pullPolicy: Always
-   # Overrides the image tag whose default is the chart appVersion.
-  tag: "e68f1b3"
+  tag: 96192f1
   port: 3333
 imagePullSecrets: []
 nameOverride: ''
