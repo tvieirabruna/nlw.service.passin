@@ -37,15 +37,15 @@ spec:
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag | default .Chart.AppVersion }}"
           imagePullPolicy: {{ .Values.image.pullPolicy }}
           env:
-          - name: DATABASE_URL
+          - name: {{ .Values.envs.database }}
             valueFrom:
               secretKeyRef:
-                name: db-connection
+                name: {{ .Values.secret.name }}
                 key: url
-          - name: API_BASE_URL
+          - name: {{ .Values.envs.api }}
             valueFrom:
               configMapKeyRef:
-                name: nlw-env
+                name: {{ .Values.configMap.name }}
                 key: url
           ports:
             - name: http

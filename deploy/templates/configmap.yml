@@ -2,7 +2,7 @@ apiVersion: v1
 kind: ConfigMap
 
 metadata:
-  name: nlw-env
+  name: {{ .Values.configMap.name }}
 
 data:
-  url: http://localhost:3333
+  url: {{ .Values.configMap.url }}

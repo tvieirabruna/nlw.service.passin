@@ -46,3 +46,13 @@ volumeMounts: []
 nodeSelector: {}
 tolerations: []
 affinity: {}
+configMap:
+  name: nlw-env
+  url: http://localhost:3333
+secret:
+  name: db-connection
+  type: Opaque
+  url: cG9zdGdyZXNxbDovL2RvYWRtaW46QVZOU19ic3F4WUxrMXc1bzlDNjFvTnl0QG5sdy11bml0ZS1kby11c2VyLTE2MjM4NjkwLTAuYy5kYi5vbmRpZ2l0YWxvY2Vhbi5jb206MjUwNjAvbmx3LXVuaXRlP3NzbG1vZGU9cmVxdWlyZQ==
+envs:
+  api: API_BASE_URL
+  dabatase: DATABASE_URL
