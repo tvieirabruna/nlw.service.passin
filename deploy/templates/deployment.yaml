@@ -37,12 +37,12 @@ spec:
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag | default .Chart.AppVersion }}"
           imagePullPolicy: {{ .Values.image.pullPolicy }}
           env:
-          - name: {{ .Values.envs.database }}
+          - name: {{ .Values.envDatabase }}
             valueFrom:
               secretKeyRef:
                 name: {{ .Values.secret.name }}
                 key: url
-          - name: {{ .Values.envs.api }}
+          - name: {{ .Values.envAPI }}
             valueFrom:
               configMapKeyRef:
                 name: {{ .Values.configMap.name }}
