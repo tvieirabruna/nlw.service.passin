@@ -2,7 +2,7 @@ replicaCount: 5
 image:
   repository: tvieirabruna/nlw.service.passin
   pullPolicy: Always
-  tag: 649cc62
+  tag: 9aefc6e
   port: 3333
 imagePullSecrets: []
 nameOverride: ''
